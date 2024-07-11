@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Choose Your Path...</title>
+<style>
+  body {margin: 0;
+    padding: 0;
+    background-image: url("giphy.gif"); /* Set your background image path */
+    background-size: cover; /* Stretch image to cover the entire background */
+    background-position: center; /* Center the background image */
+    font-family: sans-serif;}
+  #content {text-align: center;
+    padding: 20px;
+    color: white; /* Adjust text color for visibility on background image */}
+  #buttons {display: flex;
+    justify-content: center;
+    margin-top: 20px;}
+  button {margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; /* Adjust button text color for visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */}
+  #scary-image {display: none; /* Initially hidden */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initial opacity 0 for smooth fade-in */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity change */}
+</style>
+</head>
+<body>
+<div id="content">
+  <h1>Choose Your Path...</h1>
+  <p>What will you do?</p>
+</div>
+<div id="buttons">
+  <button onclick="showJumpscare()">Play</button>
+  <button onclick="showJumpscare()">Continue</button>
+  <button onclick="showJumpscare()">Settings</button>
+</div>
+<img id="scary-image" src="babadook.jpg" alt="Jumpscare!">
+<audio id="scream" src="scream.mp3" preload="auto"></audio>
+<script src="jumpscare.js"></script>
+</body>
+</html>
